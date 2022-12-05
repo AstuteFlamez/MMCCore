@@ -1,0 +1,14 @@
+name: MMCCore
+version: '${project.version}'
+main: mandomc.mmccore.MMCCore
+api-version: 1.19
+load: STARTUP
+authors: [ AstuteFlamez ]
+description: A core plugin for the minecraft server MandoMC.
+commands:
+  yaw:
+  pitch:
+  help:
+    aliases: [mandomc, mmc]
+  helpbook:
+    aliases: [tutorial]
