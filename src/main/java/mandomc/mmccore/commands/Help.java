@@ -28,7 +28,7 @@ public class Help implements CommandExecutor {
 
                 BookMeta bookMeta = (BookMeta) book.getItemMeta();
                 bookMeta.setAuthor(ChatColor.GREEN + "MandoMC");
-                bookMeta.setTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC HelpBook");
+                bookMeta.setTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC Guide");
                 book.setItemMeta(bookMeta);
 
                 help.setItem(4, book);

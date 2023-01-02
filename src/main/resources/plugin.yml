@@ -9,6 +9,6 @@ commands:
   yaw:
   pitch:
   help:
-    aliases: [mandomc, mmc]
+    aliases: [mandomc, mmc, guide]
   helpbook:
-    aliases: [tutorial]
+    aliases: [tutorial, guidebook]

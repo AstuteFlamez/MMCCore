@@ -26,42 +26,18 @@ public class HelpBook implements CommandExecutor {
 
                 BookMeta bookMeta = (BookMeta) book.getItemMeta();
                 bookMeta.setAuthor(ChatColor.GREEN + "MandoMC");
-                bookMeta.setTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC HelpBook");
+                bookMeta.setTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC Guide");
 
                 ArrayList<String> pages = new ArrayList<>();
-                pages.add(0, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC Tips & Tricks"
-                        + n + "" + n + ChatColor.GRAY + "This book is a tutorial that will help you learn this server!" +
-                        " If you have any additional questions please ask anyone online or a staff. " +
-                        "You can also get a quick reply on our discord!");
-                pages.add(1, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Claiming & Teams"
-                        + n + "" + n + ChatColor.GRAY + "We use the Factions plugin! You can claim land and create epic bases with your team. " +
-                        "Use the command " + ChatColor.UNDERLINE + "/f help" + ChatColor.GRAY + " to learn how to use it!");
-                pages.add(2, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Warping/Traveling"
-                        + n + "" + n + ChatColor.GRAY + "Use the command " + ChatColor.UNDERLINE + "/warp" + ChatColor.GRAY + " and click on a planet to teleport to it!");
-                pages.add(3, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Blasters (Guns)"
-                        + n + "" + n + ChatColor.GRAY + "Blasters are a major block in our pvp system. " +
-                        "You can purchase them at the " + ChatColor.DARK_GRAY + "black market" + ChatColor.GRAY +
-                        ". Travel to the black market by using the command " + ChatColor.UNDERLINE + "/warp" + ChatColor.GRAY +
-                        " and click on " + ChatColor.GOLD + "" + ChatColor.BOLD + "Tatooine" + ChatColor.GRAY + " and then the " + ChatColor.DARK_GRAY + "black market" + ChatColor.GRAY +
-                        ". You can purchase blasters there.");
-                pages.add(4, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Custom Items"
-                        + n + "" + n + ChatColor.GRAY + "We have custom items on our server!" +
-                        " Currently they only include " + ChatColor.RED + "lightsabers" + ChatColor.GRAY + ", however we will add more items soon!" +
-                        ChatColor.GRAY + "Use the command " + ChatColor.UNDERLINE + "/recipes" + ChatColor.GRAY + " to see how to craft them!");
-                pages.add(5, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Bosses"
-                        + n + "" + n + ChatColor.GRAY + "Currently, every hour the "
-                        + ChatColor.GOLD + "" + ChatColor.BOLD + "Rancor Boss" + ChatColor.GRAY + "spawns at Jabba's Palace! " +
-                        "Bosses are a great way to get extremely valuable items!");
-                pages.add(6, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Koths"
-                        + n + "" + n + ChatColor.GRAY + "Koths, or King of the Hills generate every 4 hours; " +
-                        "however, if no one won the last koth it will continue to run so make sure to check if a koth is active! " +
-                        "Koths contain great rewards!");
-                pages.add(7, ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Vehicles"
-                        + n + "" + n + ChatColor.GRAY + "Vehicles are fun ways to get from one to place to the next!" +
-                        " Purchase a speeder bike at "
-                        + ChatColor.UNDERLINE + "/hoverbikeshop" + ChatColor.GRAY + "!");
-
-                        bookMeta.setPages(pages);
+                pages.add(0, ChatColor.translateAlternateColorCodes('&', "&2&lMandoMC Guide\n\n&7Read this book to learn how to play!"));
+                pages.add(1, ChatColor.translateAlternateColorCodes('&', "&2&lFACTIONS\n\n&7Factions is a claiming + teams plugin! Use &u/f help &r&7for more info!"));
+                pages.add(2, ChatColor.translateAlternateColorCodes('&', "&2&lPLANETS\n\n&7Use the command &u/warp&r&7 and click on a planet to teleport to it!"));
+                pages.add(3, ChatColor.translateAlternateColorCodes('&', "&2&lBLASTERS\n\n&7Warp to the &8Black Market &7and buy blasters from a vendor."));
+                pages.add(4, ChatColor.translateAlternateColorCodes('&', "&2&lLIGHTSABERS\n\n&7Lightsabers can be crafted using the recipe found in &u/recipes&r&7!"));
+                pages.add(5, ChatColor.translateAlternateColorCodes('&', "&2&lBOSSES\n\n&7Bosses drop super useful items! Keep an eye on chat for them!"));
+                pages.add(6, ChatColor.translateAlternateColorCodes('&', "&2&lTHE FORCE\n\n&7Use &u/forceside&r&7 to pick a side of the force!\nThen you can use &u/force &7and left click powers to obtain them!"));
+                pages.add(7, ChatColor.translateAlternateColorCodes('&', "&2&lVEHICLES\n\n&7Use the command &u/hoverbikeshop &r&7or &u/recipes&r&7."));
+                bookMeta.setPages(pages);
                 book.setItemMeta(bookMeta);
                 player.getInventory().addItem(book);
             }
