@@ -4,9 +4,7 @@ import mandomc.mmccore.commands.Help;
 import mandomc.mmccore.commands.HelpBook;
 import mandomc.mmccore.commands.Pitch;
 import mandomc.mmccore.commands.Yaw;
-import mandomc.mmccore.listeners.InventoryClick;
-import mandomc.mmccore.listeners.PlayerJoin;
-import mandomc.mmccore.listeners.Brew;
+import mandomc.mmccore.listeners.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,6 +21,8 @@ public final class MMCCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new Brew(), this);
+        getServer().getPluginManager().registerEvents(new NaturalSpawn(), this);
+        getServer().getPluginManager().registerEvents(new Pearls(), this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[MMCCore]: Plugin is enabled");
 

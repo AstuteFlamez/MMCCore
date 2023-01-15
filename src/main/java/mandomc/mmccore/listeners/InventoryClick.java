@@ -28,14 +28,14 @@ public class InventoryClick implements Listener {
         bookMeta.setTitle(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC Guide");
 
         ArrayList<String> pages = new ArrayList<>();
-        pages.add(0, ChatColor.translateAlternateColorCodes('&', "&2&lMandoMC Tricks & Tips\n\n&7This book is a tutorial that will help you learn the ways of the force and server! If you have any additional questions please ask anyone online or a staff. You can also get a quick reply on our discord!"));
-        pages.add(1, ChatColor.translateAlternateColorCodes('&', "&2&lClaiming & Teams\n\n &7We use the Factions plugin! You can claim land and create epic bases with your team. Use the command &u/f help&r&7 to learn how to use it!"));
-        pages.add(2, ChatColor.translateAlternateColorCodes('&', "&2&lWarping/Traveling\n\n &7Use the command &u/warp&r&7 and click on a planet to teleport to it!"));
-        pages.add(3, ChatColor.translateAlternateColorCodes('&', "&2&lBlasters (Guns)\n\n &7Warp to &6Tatooine &7and then the &8Black Market &7to purchases blasters and grenades!"));
-        pages.add(4, ChatColor.translateAlternateColorCodes('&', "&2&lLightsabers\n\n &7Lightsabers can be crafted using the recipe found in &u/recipes&r&7!"));
-        pages.add(5, ChatColor.translateAlternateColorCodes('&', "&2&lBosses\n\n &7Bosses drop super useful items! Right now the Rancor boss is the only way to get a nether star which is needed to craft lightsabers!"));
-        pages.add(6, ChatColor.translateAlternateColorCodes('&', "&2&lForce Powers\n\n &7Use &u/forceside&r&7 to pick a side of the force! Then you can use &u/force &7and left click powers to obtain them!"));
-        pages.add(7, ChatColor.translateAlternateColorCodes('&', "&2&lVehicles\n\n &7Use the command &u/hoverbikeshop &7to purchase speeder-bikes! Soon X-Wings & N-1 Starfighters will be craftable aswell!"));
+        pages.add(0, ChatColor.translateAlternateColorCodes('&', "&2&lMandoMC Guide\n\n&7Read this book to learn how to play! Ask staff any questions!\nUse&6 /guide&7 to regain this book!"));
+        pages.add(1, ChatColor.translateAlternateColorCodes('&', "&2&lFACTIONS\n\n&7Factions is a claiming + teams plugin! Use &6/f help &r&7for more info!"));
+        pages.add(2, ChatColor.translateAlternateColorCodes('&', "&2&lPLANETS\n\n&7Use the command &6/warp&r&7 and click on a planet to teleport to it!"));
+        pages.add(3, ChatColor.translateAlternateColorCodes('&', "&2&lBLASTERS\n\n&7Warp to the &8Black Market &7and buy blasters from a vendor."));
+        pages.add(4, ChatColor.translateAlternateColorCodes('&', "&2&lLIGHTSABERS\n\n&7Lightsabers can be crafted using the recipe found in &6/recipes&r&7!"));
+        pages.add(5, ChatColor.translateAlternateColorCodes('&', "&2&lBOSSES\n\n&7Bosses drop super useful items! Keep an eye on chat for them!"));
+        pages.add(6, ChatColor.translateAlternateColorCodes('&', "&2&lTHE FORCE\n\n&7Use &6/forceside&r&7 to pick a side of the force!\nThen you can use &6/force &7and left click powers to obtain them!"));
+        pages.add(7, ChatColor.translateAlternateColorCodes('&', "&2&lVEHICLES\n\n&7Use the command &6/hoverbikeshop &r&7or &6/recipes&r&7 to obtain vehicles."));
         bookMeta.setPages(pages);
         book.setItemMeta(bookMeta);
 
