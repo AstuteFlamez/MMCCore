@@ -11,10 +11,11 @@ public class Pearls implements Listener {
     @EventHandler
     public void onTeleport(PlayerTeleportEvent event){
         if (event.getCause() == PlayerTeleportEvent.TeleportCause.ENDER_PEARL){
-            event.setCancelled(true);
             Player player = event.getPlayer();
-            player.sendMessage(ChatColor.RED + "Enderpearls are disabled!");
+            if(!player.hasPermission("mmc.enderpearls")){
+                event.setCancelled(true);
+                player.sendMessage(ChatColor.RED + "Enderpearls are disabled!");
+            }
         }
     }
-
 }

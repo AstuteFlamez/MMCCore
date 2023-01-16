@@ -18,6 +18,7 @@ public final class MMCCore extends JavaPlugin {
         getCommand("help").setExecutor(new Help());
         getCommand("helpbook").setExecutor(new HelpBook());
 
+        getServer().getPluginManager().registerEvents(new VillagersDisabled(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new Brew(), this);
