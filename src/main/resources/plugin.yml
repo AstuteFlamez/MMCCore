@@ -5,6 +5,7 @@ api-version: 1.19
 load: STARTUP
 authors: [ AstuteFlamez ]
 description: A core plugin for the minecraft server MandoMC.
+depend: [MythicMobs]
 commands:
   yaw:
   pitch:
@@ -12,3 +13,5 @@ commands:
     aliases: [mandomc, mmc, guide]
   helpbook:
     aliases: [tutorial, guidebook]
+  spawnrancor:
+  startkoth:
