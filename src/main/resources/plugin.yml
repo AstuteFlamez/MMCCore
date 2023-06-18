@@ -9,9 +9,4 @@ depend: [MythicMobs]
 commands:
   yaw:
   pitch:
-  help:
-    aliases: [mandomc, mmc, guide]
-  helpbook:
-    aliases: [tutorial, guidebook]
-  spawnrancor:
   startkoth:

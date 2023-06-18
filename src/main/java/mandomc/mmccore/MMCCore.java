@@ -18,15 +18,13 @@ public final class MMCCore extends JavaPlugin {
 
         getCommand("yaw").setExecutor(new Yaw());
         getCommand("pitch").setExecutor(new Pitch());
-        getCommand("help").setExecutor(new Help());
-        getCommand("helpbook").setExecutor(new HelpBook());
-        getCommand("spawnRancor").setExecutor(new SpawnRancor(this));
         getCommand("startkoth").setExecutor(new StartKoth(this));
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new ListenerSpam(), this);
         getServer().getPluginManager().registerEvents(new MythicMobDeath(), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
 
         MythicMobDeath.rancorSpawn(this);
         MythicMobDeath.maulSpawn(this);
