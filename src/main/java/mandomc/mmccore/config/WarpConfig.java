@@ -1,11 +1,11 @@
 package mandomc.mmccore.config;
 
+import mandomc.mmccore.MMCCore;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class WarpConfig {
 
@@ -13,14 +13,22 @@ public class WarpConfig {
     private static FileConfiguration customFile;
 
     //Finds or generates the custom config file
-    public static void setup(){
+    public static void setup() {
         file = new File(Bukkit.getServer().getPluginManager().getPlugin("MMCCore").getDataFolder(), "warps.yml");
 
-        if (!file.exists()){
-            try{
-                file.createNewFile();
-            }catch (IOException e){
-                //owww
+        if (!file.exists()) {
+            try (InputStream inputStream = MMCCore.class.getResourceAsStream("/warps.yml");
+                 OutputStream outputStream = new FileOutputStream(file)) {
+
+                if (inputStream != null) {
+                    byte[] buffer = new byte[1024];
+                    int length;
+                    while ((length = inputStream.read(buffer)) > 0) {
+                        outputStream.write(buffer, 0, length);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
         customFile = YamlConfiguration.loadConfiguration(file);
