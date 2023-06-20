@@ -7,14 +7,13 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-public class BlockBreakListener implements Listener {
+public class BeskarChance implements Listener {
 
     private final Random random = new Random();
     private static final double ANCIENT_DEBRIS_CHANCE = 0.1;

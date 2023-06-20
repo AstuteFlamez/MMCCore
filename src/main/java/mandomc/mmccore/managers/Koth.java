@@ -1,4 +1,4 @@
-package mandomc.mmccore.handlers;
+package mandomc.mmccore.managers;
 
 import org.bukkit.entity.Player;
 

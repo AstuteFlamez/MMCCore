@@ -5,8 +5,16 @@ api-version: 1.19
 load: STARTUP
 authors: [ AstuteFlamez ]
 description: A core plugin for the minecraft server MandoMC.
-depend: [MythicMobs]
+depend: [MythicMobs],[WorldGuard]
 commands:
   yaw:
   pitch:
   startkoth:
+  recipes:
+    aliases: [ lightsaber, lightsabers ]
+  mmcget:
+    aliases: [ itemget ]
+  mmcgive:
+    aliases: [ itemgive ]
+  warp:
+  spawn:

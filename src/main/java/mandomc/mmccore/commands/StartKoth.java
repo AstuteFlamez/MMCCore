@@ -1,7 +1,7 @@
 package mandomc.mmccore.commands;
 
 import mandomc.mmccore.MMCCore;
-import mandomc.mmccore.handlers.Koth;
+import mandomc.mmccore.managers.Koth;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
