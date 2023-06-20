@@ -5,7 +5,7 @@ api-version: 1.19
 load: STARTUP
 authors: [ AstuteFlamez ]
 description: A core plugin for the minecraft server MandoMC.
-depend: [MythicMobs],[WorldGuard]
+softdepend: [MythicMobs,WorldGuard]
 commands:
   yaw:
   pitch:
