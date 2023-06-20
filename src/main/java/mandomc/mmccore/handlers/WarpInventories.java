@@ -1,5 +1,6 @@
 package mandomc.mmccore.handlers;
 
+import mandomc.mmccore.config.WarpConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -20,20 +21,20 @@ public class WarpInventories {
 
         // All warps in descending order
 
-        warps.setItem(9, ISC.createItem(Material.RED_GLAZED_TERRACOTTA, createString("&4&lDathomir"),  createString("&c→ Claimable")));
-        warps.setItem(11, ISC.createItem(Material.MAGMA_BLOCK, createString("&4&lMustafar"), createString("&c→ Claimable")));
-        warps.setItem(13, ISC.createItem(Material.MANGROVE_WOOD, createString("&a&lEarth"), createString("&c→ Factions")));
-        warps.setItem(15, ISC.createItem(Material.WARPED_HYPHAE, createString("&1&lUmbara"), createString("&c→ Claimable")));
-        warps.setItem(17, ISC.createItem(Material.GREEN_CONCRETE_POWDER, createString("&a&lAlderaan"), createString("&c→ Claimable")));
-        warps.setItem(27, ISC.createItem(Material.MUD_BRICKS, createString("&9&lConcordia"), createString("&9→ Mines"), createString("&4→ PvP Arena")));
-        warps.setItem(29, ISC.createItem(Material.JUNGLE_WOOD, createString("&2&lKashyyyk"), createString("&6→ Farms")));
-        warps.setItem(31, ISC.createItem(Material.PRISMARINE, createString("&b&lNaboo"), createString("&a→ Spawn"), createString("&c→ Claimable")));
-        warps.setItem(33, ISC.createItem(Material.BLUE_ICE, createString("&b&lIlum"), createString("&6→ Kyber Crystals")));
-        warps.setItem(35, ISC.createItem(Material.SMOOTH_RED_SANDSTONE, createString("&6&lGeonosis"), createString("&c→ Claimable")));
-        warps.setItem(45, ISC.createItem(Material.MANGROVE_WOOD, createString("&2&lMorak"), createString("&c→ Claimable")));
-        warps.setItem(47, ISC.createItem(Material.SANDSTONE, createString("&6&lTatooine"), createString("&a→ Shops"), createString("&6→ Boss Fight"), createString("&8→ Black Market")));
-        warps.setItem(49, ISC.createItem(Material.SNOW_BLOCK, createString("&f&lHoth"), createString("&c→ Claimable"), createString("&f→ KOTH")));
-        warps.setItem(51, ISC.createItem(Material.NETHERITE_BLOCK, createString("&8&lMandalore"), createString("&6→ Boss Fight"), createString("&7→ Mines")));
+        warps.setItem(WarpConfig.get().getInt("DathomirSlot"), UtilityMethods.createWarp(Material.RED_GLAZED_TERRACOTTA, "DathomirName", "DathomirDesc"));
+        warps.setItem(WarpConfig.get().getInt("MustafarSlot"), UtilityMethods.createWarp(Material.MAGMA_BLOCK, "MustafarName", "MustafarDesc"));
+        warps.setItem(WarpConfig.get().getInt("EarthSlot"), UtilityMethods.createWarp(Material.GRASS_BLOCK, "EarthName", "EarthDesc"));
+        warps.setItem(WarpConfig.get().getInt("UmbaraSlot"), UtilityMethods.createWarp(Material.WARPED_HYPHAE, "UmbaraName", "UmbaraDesc"));
+        warps.setItem(WarpConfig.get().getInt("AlderaanSlot"), UtilityMethods.createWarp(Material.GREEN_CONCRETE_POWDER, "AlderaanName", "AlderaanDesc"));
+        warps.setItem(WarpConfig.get().getInt("ConcordiaSlot"), UtilityMethods.createWarp(Material.MUD_BRICKS, "ConcordiaName", "ConcordiaDesc"));
+        warps.setItem(WarpConfig.get().getInt("KashyyykSlot"), UtilityMethods.createWarp(Material.JUNGLE_WOOD, "KashyyykName", "KashyyykDesc"));
+        warps.setItem(WarpConfig.get().getInt("NabooSlot"), UtilityMethods.createWarp(Material.PRISMARINE, "NabooName", "NabooDesc"));
+        warps.setItem(WarpConfig.get().getInt("IlumSlot"), UtilityMethods.createWarp(Material.BLUE_ICE, "IlumName", "IlumDesc"));
+        warps.setItem(WarpConfig.get().getInt("GeonosisSlot"), UtilityMethods.createWarp(Material.SMOOTH_RED_SANDSTONE, "GeonosisName", "GeonosisDesc"));
+        warps.setItem(WarpConfig.get().getInt("MorakSlot"), UtilityMethods.createWarp(Material.MANGROVE_WOOD, "MorakName", "MorakDesc"));
+        warps.setItem(WarpConfig.get().getInt("TatooineSlot"), UtilityMethods.createWarp(Material.SANDSTONE, "TatooineName", "TatooineDesc"));
+        warps.setItem(WarpConfig.get().getInt("HothSlot"), UtilityMethods.createWarp(Material.SNOW_BLOCK, "HothName", "HothDesc"));
+        warps.setItem(WarpConfig.get().getInt("MandaloreSlot"), UtilityMethods.createWarp(Material.NETHERITE_BLOCK, "MandaloreName", "MandaloreDesc"));
 
         for (int slot = 0; slot < 54; slot++) {
             ItemStack item = warps.getItem(slot);if (item == null || item.getType() == Material.AIR) {
@@ -47,7 +48,7 @@ public class WarpInventories {
 
     public static Inventory createTatooine(Player player){
 
-        Inventory tatooine = Bukkit.createInventory(player, 54, createString("&6&lTatooine"));
+        Inventory tatooine = Bukkit.createInventory(player, 54, WarpConfig.get().getString("TatooineName"));
 
         tatooine.setItem(24, ISC.createItem(Material.CHISELED_SANDSTONE, createString("&6&lMos Eisley"), createString("&a→ Shops")));
         tatooine.setItem(34, ISC.createItem(Material.TINTED_GLASS, createString("&8&lBlack Market"), createString("&8→ Black Market")));
@@ -64,7 +65,7 @@ public class WarpInventories {
 
     public static Inventory createConcordia(Player player){
 
-        Inventory concordia = Bukkit.createInventory(player, 54, createString("&6&lConcordia"));
+        Inventory concordia = Bukkit.createInventory(player, 54, WarpConfig.get().getString("ConcordiaName"));
 
         concordia.setItem(38, ISC.createItem(Material.BLACKSTONE_WALL, createString("&9&lDeath Watch Arena"), createString("&4→ PvP Arena")));
         concordia.setItem(24, ISC.createItem(Material.DIAMOND_ORE, createString("&b&lConcordian Mines"), createString("&9→ Mines")));
@@ -80,7 +81,7 @@ public class WarpInventories {
 
     public static Inventory createGeonosis(Player player){
 
-        Inventory geonosis = Bukkit.createInventory(player, 54, ChatColor.GOLD + "" + ChatColor.BOLD + "Geonosis");
+        Inventory geonosis = Bukkit.createInventory(player, 54, WarpConfig.get().getString("ConcordiaName"));
 
         geonosis.setItem(19, ISC.createItem(Material.RED_SANDSTONE_WALL, createString("&6&lGeonosis Arena"), createString("&6→ Boss Fight &oComing soon...")));
         geonosis.setItem(42, ISC.createItem(Material.BONE_BLOCK, createString("&6&lGeonosis"), createString("&c→ Claimable")));

@@ -1,6 +1,7 @@
 package mandomc.mmccore;
 
 import mandomc.mmccore.commands.*;
+import mandomc.mmccore.config.WarpConfig;
 import mandomc.mmccore.listeners.*;
 import mandomc.mmccore.recipes.Recipes;
 import mandomc.mmccore.tasks.ShipsRunnable;
@@ -30,6 +31,9 @@ public final class MMCCore extends JavaPlugin {
 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
+        WarpConfig.setup();
+        WarpConfig.get().options().copyDefaults(true);
+        WarpConfig.save();
 
         Recipes.init();
 
@@ -45,7 +49,7 @@ public final class MMCCore extends JavaPlugin {
         getCommand("startkoth").setExecutor(new StartKoth(this));
         getCommand("warp").setExecutor(new Warp());
         getCommand("spawn").setExecutor(new Spawn());
-        getCommand("reload").setExecutor(new Reload(this));
+        getCommand("mmcreload").setExecutor(new Reload(this));
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new ExploitFixes(this), this);

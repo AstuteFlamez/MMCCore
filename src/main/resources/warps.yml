@@ -1,0 +1,147 @@
+#Dathomir
+DathomirSlot: 9
+DathomirName: "&c&lDathomirLOLOOLOL"
+DathomirDesc:
+  - "&6&o→ Coming soon..."
+DathomirX: 0
+DathomirY: 0
+DathomirZ: 0
+DathomirYaw: 0f
+DathomirPitch: 0f
+#Mustafar
+MustafarSlot: 11
+MustafarName: "&4&lMustafar"
+MustafarDesc:
+  - "&6&o→ Coming soon..."
+MustafarX: 0
+MustafarY: 0
+MustafarZ: 0
+MustafarYaw: 0f
+MustafarPitch: 0f
+#Earth
+EarthSlot: 13
+EarthName: "&a&lEarth"
+EarthDesc:
+  - "&c→ Claimable"
+EarthX: 0
+EarthY: 0
+EarthZ: 0
+EarthYaw: 0f
+EarthzPitch: 0f
+#Umbara
+UmbaraSlot: 15
+UmbaraName: "&1&lUmbara"
+UmbaraDesc:
+  - "&c&o→ Coming soon..."
+UmbaraX: 0
+UmbaraY: 0
+UmbaraZ: 0
+UmbaraYaw: 0f
+UmbaraPitch: 0f
+#Alderaan
+AlderaanSlot: 17
+AlderaanName: "&a&lAlderaan"
+AlderaanDesc:
+  - "&6→ Forestry"
+AlderaanX: 0
+AlderaanY: 0
+AlderaanZ: 0
+AlderaanYaw: 0f
+AlderaanPitch: 0f
+#Concordia
+ConcordiaSlot: 27
+ConcordiaName: "&9&lConcordia"
+ConcordiaDesc:
+  - "&c→ PvP Arena"
+ConcordiaX: 0
+ConcordiaY: 0
+ConcordiaZ: 0
+ConcordiaYaw: 0f
+ConcordiaPitch: 0f
+#Kashyyyk
+KashyyykSlot: 29
+KashyyykName: "&2&lKashyyyk"
+KashyyykDesc:
+  - "&6&o→ Coming soon..."
+KashyyykX: 0
+KashyyykY: 0
+KashyyykZ: 0
+KashyyykYaw: 0f
+KashyyykPitch: 0f
+#Naboo
+NabooSlot: 31
+NabooName: "&b&lNaboo"
+NabooDesc:
+  - "&a→ Spawn"
+NabooX: 0
+NabooY: 0
+NabooZ: 0
+NabooYaw: 0f
+NabooPitch: 0f
+#Ilum
+IlumSlot: 33
+IlumName: "&b&lIlum"
+IlumDesc:
+  - "&3→ Kyber Crystals"
+IlumX: 0
+IlumY: 0
+IlumZ: 0
+IlumYaw: 0f
+IlumPitch: 0f
+#Geonosis
+GeonosisSlot: 35
+GeonosisName: "&6&lGeonosis"
+GeonosisDesc:
+  - "&c&o→ Coming soon..."
+GeonosisX: 0
+GeonosisY: 0
+GeonosisZ: 0
+GeonosisYaw: 0f
+GeonosisPitch: 0f
+#Morak
+MorakSlot: 45
+MorakName: "&2&lMorak"
+MorakDesc:
+  - "&7&o→ Coming soon..."
+MorakX: 0
+MorakY: 0
+MorakZ: 0
+MorakYaw: 0f
+MorakPitch: 0f
+#Tatooine
+TatooineSlot: 47
+TatooineName: "&6&lTatooine"
+TatooineDesc:
+  - "&8→ Black Market"
+  - "&2→ Jabba's Palace"
+TatooineX: 0
+TatooineY: 0
+TatooineZ: 0
+TatooineYaw: 0f
+TatooinePitch: 0f
+#Hoth
+HothSlot: 49
+HothName: "&f&lHoth"
+HothDesc:
+  - "&c→ KOTH"
+HothX: 0
+HothY: 0
+HothZ: 0
+HothYaw: 0f
+HothPitch: 0f
+#Mandalore
+MandaloreSlot: 51
+MandaloreName: "&8&lMandalore"
+MandaloreDesc:
+  - "&8→ Mines"
+MandaloreX: 0
+MandaloreY: 0
+MandaloreZ: 0
+MandaloreYaw: 0f
+MandalorePitch: 0f
+##################################
+##################################
+##################################
+##################################
+##################################
+
