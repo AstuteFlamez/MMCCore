@@ -1,0 +1,11 @@
+#DisableBlockPlace
+EndCrystal: true
+EndPortalFrame: true
+Bedrock: true
+#Others
+MusicDiscTempBug: true
+EnderCrystal: true
+PotionBrewing: true
+NaturalPhantoms: true
+Enderpearls: true
+Villagers: true

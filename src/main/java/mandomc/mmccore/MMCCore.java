@@ -28,6 +28,9 @@ public final class MMCCore extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         Recipes.init();
 
         instance = this;
@@ -44,7 +47,7 @@ public final class MMCCore extends JavaPlugin {
         getCommand("spawn").setExecutor(new Spawn());
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
-        getServer().getPluginManager().registerEvents(new ExploitFixes(), this);
+        getServer().getPluginManager().registerEvents(new ExploitFixes(this), this);
         getServer().getPluginManager().registerEvents(new MythicMobDeath(), this);
         getServer().getPluginManager().registerEvents(new BeskarChance(), this);
         getServer().getPluginManager().registerEvents(new KyberBleeding(), this);
