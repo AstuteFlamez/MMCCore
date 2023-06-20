@@ -18,3 +18,4 @@ commands:
     aliases: [ itemgive ]
   warp:
   spawn:
+  reload:

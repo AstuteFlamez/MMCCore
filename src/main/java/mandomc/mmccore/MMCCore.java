@@ -45,6 +45,7 @@ public final class MMCCore extends JavaPlugin {
         getCommand("startkoth").setExecutor(new StartKoth(this));
         getCommand("warp").setExecutor(new Warp());
         getCommand("spawn").setExecutor(new Spawn());
+        getCommand("reload").setExecutor(new Reload(this));
 
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new ExploitFixes(this), this);
