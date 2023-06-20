@@ -32,6 +32,7 @@ public class UtilityMethods {
             lore.add(ChatColor.translateAlternateColorCodes('&', yourItemLoreLines));
         }
         meta.setLore(lore);
+        i.setItemMeta(meta);
 
         return i;
 
