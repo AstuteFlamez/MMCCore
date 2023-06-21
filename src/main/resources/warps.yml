@@ -144,4 +144,27 @@ MandalorePitch: 0f
 ##################################
 ##################################
 ##################################
-
+#BlackMarket
+BlackMarketSlot: 34
+BlackMarketName: "&8&lBlack Market"
+BlackMarketX: 0
+BlackMarketY: 0
+BlackMarketZ: 0
+BlackMarketYaw: 0f
+BlackMarketPitch: 0f
+#Jabba'sPalace
+JabbaSlot: 37
+JabbaName: "&2&lJabba's Palace"
+JabbaX: 0
+JabbaY: 0
+JabbaZ: 0
+JabbaYaw: 0f
+JabbaPitch: 0f
+#Arena
+ArenaSlot: 38
+ArenaName: "&&9&lDeath Watch Arena""
+ArenaX: 0
+ArenaY: 0
+ArenaZ: 0
+ArenaYaw: 0f
+ArenaPitch: 0f

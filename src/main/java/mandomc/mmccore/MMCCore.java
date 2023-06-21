@@ -18,7 +18,7 @@ public final class MMCCore extends JavaPlugin {
 
     private final HashMap<UUID, Long> lightsaberCooldown;
 
-    public static String prefix = ChatColor.GREEN + "" + ChatColor.BOLD + "MMCITEMS" + ChatColor.DARK_GRAY + " » ";
+    public static String prefix = ChatColor.GREEN + "" + ChatColor.BOLD + "MMCCore" + ChatColor.DARK_GRAY + " » ";
 
     public static MMCCore instance;
 

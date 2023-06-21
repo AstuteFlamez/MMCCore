@@ -1,5 +1,7 @@
 package mandomc.mmccore.listeners;
 
+import mandomc.mmccore.MMCCore;
+import mandomc.mmccore.config.WarpConfig;
 import mandomc.mmccore.handlers.WarpInventories;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,6 +14,8 @@ import org.bukkit.inventory.Inventory;
 
 public class WarpClick implements Listener {
 
+    String prefix = MMCCore.prefix + ChatColor.GRAY + "Traveling to the ";
+
     @EventHandler
     public void onClick(InventoryClickEvent event) {
 
@@ -21,10 +25,6 @@ public class WarpClick implements Listener {
             return;
         }
 
-        Inventory warps = WarpInventories.createWarp(player);
-
-        Inventory geonosis = WarpInventories.createGeonosis(player);
-
         Inventory tatooine = WarpInventories.createTatooine(player);
 
         Inventory concordia = WarpInventories.createConcordia(player);
@@ -33,56 +33,56 @@ public class WarpClick implements Listener {
             event.setCancelled(true);
             switch (event.getSlot()) {
                 case 45:
-                    Location morak = new Location(Bukkit.getWorld("Morak"), -342, 117, -292, -52.1f, -3.4f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Morak" + ChatColor.GRAY + "!");
+                    Location morak = new Location(Bukkit.getWorld("Morak"), WarpConfig.get().getDouble("MorakX"), WarpConfig.get().getDouble("MorakY"), WarpConfig.get().getDouble("MorakZ"), (float) WarpConfig.get().getDouble("MorakYaw"), (float) WarpConfig.get().getDouble("MorakPitch"));
+                    player.sendMessage(prefix + translate("MorakName"));
                     player.teleport(morak);
                     player.updateInventory();
                     break;
                 case 33:
-                    Location ilum = new Location(Bukkit.getWorld("Ilum"), 11.6, -60, -55.6, 1.8f, 4.5f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.AQUA + "" + ChatColor.BOLD + "Ilum" + ChatColor.GRAY + "!");
+                    Location ilum = new Location(Bukkit.getWorld("Ilum"), WarpConfig.get().getDouble("IlumX"), WarpConfig.get().getDouble("IlumY"), WarpConfig.get().getDouble("IlumZ"), (float) WarpConfig.get().getDouble("IlumYaw"), (float) WarpConfig.get().getDouble("IlumPitch"));
+                    player.sendMessage(prefix + translate("IlumName"));
                     player.teleport(ilum);
                     player.updateInventory();
                     break;
                 case 51:
-                    Location mandalore = new Location(Bukkit.getWorld("Mandalore"), -33, -60, 20, -92.75f, -5.2f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Mandalore" + ChatColor.GRAY + "!");
+                    Location mandalore = new Location(Bukkit.getWorld("Mandalore"), WarpConfig.get().getDouble("MandaloreX"), WarpConfig.get().getDouble("MandaloreY"), WarpConfig.get().getDouble("MandaloreZ"), (float) WarpConfig.get().getDouble("MandaloreYaw"), (float) WarpConfig.get().getDouble("MandalorePitch"));
+                    player.sendMessage(prefix + translate("MandaloreName"));
                     player.teleport(mandalore);
                     player.updateInventory();
                     break;
                 case 9:
-                    Location dathomir = new Location(Bukkit.getWorld("Dathomir"), 21, 66, -58, -34.3f, 2.7f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_RED + "" + ChatColor.BOLD + "Dathomir" + ChatColor.GRAY + "!");
+                    Location dathomir = new Location(Bukkit.getWorld("Dathomir"), WarpConfig.get().getDouble("DathomirX"), WarpConfig.get().getDouble("DathomirY"), WarpConfig.get().getDouble("DathomirZ"), (float) WarpConfig.get().getDouble("DathomirYaw"), (float) WarpConfig.get().getDouble("DathomirPitch"));
+                    player.sendMessage(prefix + translate("DathomirName"));
                     player.teleport(dathomir);
                     player.updateInventory();
                     break;
                 case 15:
-                    Location umbara = new Location(Bukkit.getWorld("Umbara"), -23, 73, -21, 44.1f, -2.1f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.BLUE + "" + ChatColor.BOLD + "Umbara" + ChatColor.GRAY + "!");
+                    Location umbara = new Location(Bukkit.getWorld("Umbara"), WarpConfig.get().getDouble("UmbaraX"), WarpConfig.get().getDouble("UmbaraY"), WarpConfig.get().getDouble("UmbaraZ"), (float) WarpConfig.get().getDouble("UmbaraYaw"), (float) WarpConfig.get().getDouble("UmbaraPitch"));
+                    player.sendMessage(prefix + translate("UmbaraName"));
                     player.teleport(umbara);
                     player.updateInventory();
                     break;
                 case 29:
-                    Location kashyyyk = new Location(Bukkit.getWorld("Kashyyyk"), -163, 39, 17, -138.83f, -3.23f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Kashyyyk" + ChatColor.GRAY + "!");
+                    Location kashyyyk = new Location(Bukkit.getWorld("Kashyyyk"), WarpConfig.get().getDouble("KashyyykX"), WarpConfig.get().getDouble("KashyyykY"), WarpConfig.get().getDouble("KashyyykZ"), (float) WarpConfig.get().getDouble("KashyyykYaw"), (float) WarpConfig.get().getDouble("KashyyykPitch"));
+                    player.sendMessage(prefix + translate("KashyyykName"));
                     player.teleport(kashyyyk);
                     player.updateInventory();
                     break;
                 case 17:
-                    Location alderaan = new Location(Bukkit.getWorld("Alderaan"), -169, 42, 184, -161.8f, -6.8f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Alderaan" + ChatColor.GRAY + "!");
+                    Location alderaan = new Location(Bukkit.getWorld("Alderaan"), WarpConfig.get().getDouble("AlderaanX"), WarpConfig.get().getDouble("AlderaanY"), WarpConfig.get().getDouble("AlderaanZ"), (float) WarpConfig.get().getDouble("AlderaanYaw"), (float) WarpConfig.get().getDouble("AlderaanPitch"));
+                    player.sendMessage(prefix + translate("AlderaanName"));
                     player.teleport(alderaan);
                     player.updateInventory();
                     break;
                 case 49:
-                    Location hoth = new Location(Bukkit.getWorld("Hoth"), -38, 98, -140, -25.5f, 8.6f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.WHITE + "" + ChatColor.BOLD + "Hoth" + ChatColor.GRAY + "!");
+                    Location hoth = new Location(Bukkit.getWorld("Hoth"), WarpConfig.get().getDouble("HothX"), WarpConfig.get().getDouble("HothY"), WarpConfig.get().getDouble("HothZ"), (float) WarpConfig.get().getDouble("HothYaw"), (float) WarpConfig.get().getDouble("HothPitch"));
+                    player.sendMessage(prefix + translate("HothName"));
                     player.teleport(hoth);
                     player.updateInventory();
                     break;
                 case 31:
-                    Location naboo = new Location(Bukkit.getWorld("Naboo"), -12868, 142, 1262, -3.27f, -1.83f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.AQUA + "" + ChatColor.BOLD + "Naboo" + ChatColor.GRAY + "!");
+                    Location naboo = new Location(Bukkit.getWorld("Naboo"), WarpConfig.get().getDouble("NabooX"), WarpConfig.get().getDouble("NabooY"), WarpConfig.get().getDouble("NabooZ"), (float) WarpConfig.get().getDouble("NabooYaw"), (float) WarpConfig.get().getDouble("NabooPitch"));
+                    player.sendMessage(prefix + translate("NabooName"));
                     player.teleport(naboo);
                     player.updateInventory();
                     break;
@@ -93,78 +93,55 @@ public class WarpClick implements Listener {
                     player.openInventory(tatooine);
                     break;
                 case 11:
-                    Location mustafar = new Location(Bukkit.getWorld("Mustafar"), -3, 62, -43, 51.9f, -17.8f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_RED + "" + ChatColor.BOLD + "Mustafar" + ChatColor.GRAY + "!");
+                    Location mustafar = new Location(Bukkit.getWorld("Mustafar"), WarpConfig.get().getDouble("MustafarX"), WarpConfig.get().getDouble("MustafarY"), WarpConfig.get().getDouble("MustafarZ"), (float) WarpConfig.get().getDouble("MustafarYaw"), (float) WarpConfig.get().getDouble("MustafarPitch"));
+                    player.sendMessage(prefix + translate("MustafarName"));
                     player.teleport(mustafar);
                     player.updateInventory();
                     break;
                 case 13:
-                    Location Earth = new Location(Bukkit.getWorld("Earth"), -3, 62, -43, 51.9f, -17.8f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.GREEN + "" + ChatColor.BOLD + "Earth" + ChatColor.GRAY + "!");
+                    Location Earth = new Location(Bukkit.getWorld("Earth"), WarpConfig.get().getDouble("EarthX"), WarpConfig.get().getDouble("EarthY"), WarpConfig.get().getDouble("EarthZ"), (float) WarpConfig.get().getDouble("EarthYaw"), (float) WarpConfig.get().getDouble("EarthPitch"));
+                    player.sendMessage(prefix + translate("EarthName"));
                     player.teleport(Earth);
                     player.updateInventory();
                 case 35:
-                    player.openInventory(geonosis);
-                    break;
-            }
-        }
-        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Geonosis")) {
-            event.setCancelled(true);
-            switch (event.getSlot()) {
-                case 19:
-                    /*Location arena = new Location(Bukkit.getWorld("GeonosisArena"),15424, 44, -2061, 83.05f, -3.2f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.GOLD + "" + ChatColor.BOLD + "Geonosis Arena" + ChatColor.GRAY + "!");
-                    player.teleport(arena);
-                    player.updateInventory();
-                    break;*/
-                case 42:
-                    Location geonosisLoc = new Location(Bukkit.getWorld("Geonosis"), 59, 66, -152, 110.8f, 0.4f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.GOLD + "" + ChatColor.BOLD + "Geonosis" + ChatColor.GRAY + "!");
+                    Location geonosisLoc = new Location(Bukkit.getWorld("Geonosis"), WarpConfig.get().getDouble("GeonosisX"), WarpConfig.get().getDouble("GeonosisY"), WarpConfig.get().getDouble("GeonosisZ"), (float) WarpConfig.get().getDouble("GeonosisYaw"), (float) WarpConfig.get().getDouble("GeonosisPitch"));
+                    player.sendMessage(prefix + translate("GeonosisName"));
                     player.teleport(geonosisLoc);
                     player.updateInventory();
-                    break;
             }
         }
-        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Tatooine")) {
+        if (event.getView().getTitle().equalsIgnoreCase(translate("TatooineName"))){
             event.setCancelled(true);
             switch (event.getSlot()) {
-                case 24:
-                    Location spawn = new Location(Bukkit.getWorld("Tatooine"),1883, 60, 161, 98.00916f, 5.051999f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.GOLD + "" + ChatColor.BOLD + "Mos Eisley" + ChatColor.GRAY + "!");
-                    player.teleport(spawn);
-                    player.updateInventory();
-                    break;
                 case 34:
-                    Location blackMarket = new Location(Bukkit.getWorld("Tatooine"),1682, 51, 181, 179.0379f, 4.9510083f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Black Market" + ChatColor.GRAY + "!");
+                    Location blackMarket = new Location(Bukkit.getWorld("Tatooine"), WarpConfig.get().getDouble("BlackMarketX"), WarpConfig.get().getDouble("BlackMarketY"), WarpConfig.get().getDouble("BlackMarketZ"), (float) WarpConfig.get().getDouble("BlackMarketYaw"), (float) WarpConfig.get().getDouble("BlackMarketPitch"));
+                    player.sendMessage(prefix + translate("BlackMarketName"));
                     player.teleport(blackMarket);
                     player.updateInventory();
                     break;
                 case 37:
-                    Location jabba = new Location(Bukkit.getWorld("JabbasPalace"),-122, -50, 142, 180f, 0f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to " + ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Jabba's Palace" + ChatColor.GRAY + "!");
+                    Location jabba = new Location(Bukkit.getWorld("JabbasPalace"), WarpConfig.get().getDouble("JabbaX"), WarpConfig.get().getDouble("JabbaY"), WarpConfig.get().getDouble("JabbaZ"), (float) WarpConfig.get().getDouble("JabbaYaw"), (float) WarpConfig.get().getDouble("JabbaPitch"));
+                    player.sendMessage(prefix + translate("JabbaName"));
                     player.teleport(jabba);
                     player.updateInventory();
                     break;
             }
         }
-        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Concordia")) {
+        if (event.getView().getTitle().equalsIgnoreCase(translate("ConcordiaName"))){
             event.setCancelled(true);
             switch (event.getSlot()) {
-                case 24:
-                    Location mines = new Location(Bukkit.getWorld("Concordia"),15424, 44, -2061, 83.05f, -3.2f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.AQUA + "" + ChatColor.BOLD + "Concordian Mines" + ChatColor.GRAY + "!");
-                    player.teleport(mines);
-                    player.updateInventory();
-                    break;
                 case 38:
-                    Location arena = new Location(Bukkit.getWorld("Concordia"),16093, 34, -3176, 151.46f, -2.23f);
-                    player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "MMCWarps" + ChatColor.DARK_GRAY + " » " + ChatColor.GRAY + "Traveling to the " + ChatColor.BLUE + "" + ChatColor.BOLD + "Death Watch Arena" + ChatColor.GRAY + "!");
+                    Location arena = new Location(Bukkit.getWorld("Concordia"), WarpConfig.get().getDouble("ArenaX"), WarpConfig.get().getDouble("ArenaY"), WarpConfig.get().getDouble("ArenaZ"), (float) WarpConfig.get().getDouble("ArenaYaw"), (float) WarpConfig.get().getDouble("ArenaPitch"));
+                    player.sendMessage(prefix + translate("ArenaName"));
                     player.teleport(arena);
                     player.updateInventory();
                     break;
             }
         }
+    }
+
+    public String translate(String string) {
+        return ChatColor.translateAlternateColorCodes('&', WarpConfig.get().getString(string));
     }
 
 }

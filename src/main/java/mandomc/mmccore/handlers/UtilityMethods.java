@@ -38,6 +38,18 @@ public class UtilityMethods {
 
     }
 
+    public static ItemStack createSubWarp(Material material, String namePath){
+
+        ItemStack i = new ItemStack(material);
+
+        ItemMeta meta = i.getItemMeta();
+        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', WarpConfig.get().getString(namePath)));
+        i.setItemMeta(meta);
+
+        return i;
+
+    }
+
     public static boolean isMobSpawningEnabled(Location location, Player player){
         LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
         RegionContainer regionContainer = WorldGuard.getInstance().getPlatform().getRegionContainer();

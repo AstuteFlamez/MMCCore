@@ -48,11 +48,10 @@ public class WarpInventories {
 
     public static Inventory createTatooine(Player player){
 
-        Inventory tatooine = Bukkit.createInventory(player, 54, WarpConfig.get().getString("TatooineName"));
+        Inventory tatooine = Bukkit.createInventory(player, 54, ChatColor.translateAlternateColorCodes('&', WarpConfig.get().getString("TatooineName")));
 
-        tatooine.setItem(24, ISC.createItem(Material.CHISELED_SANDSTONE, createString("&6&lMos Eisley"), createString("&a→ Shops")));
-        tatooine.setItem(34, ISC.createItem(Material.TINTED_GLASS, createString("&8&lBlack Market"), createString("&8→ Black Market")));
-        tatooine.setItem(37, ISC.createItem(Material.GREEN_TERRACOTTA, createString("&2&lJabba's Palace"), createString("&6→ Boss Fight")));
+        tatooine.setItem(WarpConfig.get().getInt("BlackMarketSlot"), UtilityMethods.createSubWarp(Material.TINTED_GLASS, "BlackMarketName"));
+        tatooine.setItem(WarpConfig.get().getInt("JabbaSlot"), UtilityMethods.createSubWarp(Material.GREEN_TERRACOTTA, "JabbaName"));
 
         for (int slot = 0; slot < 54; slot++) {
             ItemStack item = tatooine.getItem(slot);if (item == null || item.getType() == Material.AIR) {
@@ -65,11 +64,9 @@ public class WarpInventories {
 
     public static Inventory createConcordia(Player player){
 
-        Inventory concordia = Bukkit.createInventory(player, 54, WarpConfig.get().getString("ConcordiaName"));
+        Inventory concordia = Bukkit.createInventory(player, 54, ChatColor.translateAlternateColorCodes('&', WarpConfig.get().getString("ConcordiaName")));
 
-        concordia.setItem(38, ISC.createItem(Material.BLACKSTONE_WALL, createString("&9&lDeath Watch Arena"), createString("&4→ PvP Arena")));
-        concordia.setItem(24, ISC.createItem(Material.DIAMOND_ORE, createString("&b&lConcordian Mines"), createString("&9→ Mines")));
-
+        concordia.setItem(WarpConfig.get().getInt("ArenaSlot"), UtilityMethods.createSubWarp(Material.BLACKSTONE_WALL, "ArenaName"));
         for (int slot = 0; slot < 54; slot++) {
             ItemStack item = concordia.getItem(slot);if (item == null || item.getType() == Material.AIR) {
                 concordia.setItem(slot, ISC.createItem(Material.BLACK_STAINED_GLASS_PANE, createString("&a"),  createString("&a")));
@@ -77,20 +74,6 @@ public class WarpInventories {
         }
 
         return concordia;
-    }
-
-    public static Inventory createGeonosis(Player player){
-
-        Inventory geonosis = Bukkit.createInventory(player, 54, WarpConfig.get().getString("ConcordiaName"));
-
-        geonosis.setItem(19, ISC.createItem(Material.RED_SANDSTONE_WALL, createString("&6&lGeonosis Arena"), createString("&6→ Boss Fight &oComing soon...")));
-        geonosis.setItem(42, ISC.createItem(Material.BONE_BLOCK, createString("&6&lGeonosis"), createString("&c→ Claimable")));
-        for (int slot = 0; slot < 54; slot++) {
-            ItemStack item = geonosis.getItem(slot);if (item == null || item.getType() == Material.AIR) {
-                geonosis.setItem(slot, ISC.createItem(Material.BLACK_STAINED_GLASS_PANE, createString("&a"),  createString("&a")));
-            }
-        }
-        return geonosis;
     }
 
     public static String createString(String s){
