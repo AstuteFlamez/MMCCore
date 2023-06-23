@@ -85,6 +85,14 @@ public class Warp implements CommandExecutor {
                     Location Earth = new Location(Bukkit.getWorld("Earth"), WarpConfig.get().getDouble("EarthX"), WarpConfig.get().getDouble("EarthY"), WarpConfig.get().getDouble("EarthZ"), (float) WarpConfig.get().getDouble("EarthYaw"), (float) WarpConfig.get().getDouble("EarthPitch"));
                     player.sendMessage(prefix + translate("EarthName"));
                     player.teleport(Earth);
+                }else if(args[0].equalsIgnoreCase("mines")){
+                    Location mines = new Location(Bukkit.getWorld("Concordia"), WarpConfig.get().getDouble("MinesX"), WarpConfig.get().getDouble("MinesY"), WarpConfig.get().getDouble("MinesZ"), (float) WarpConfig.get().getDouble("MinesYaw"), (float) WarpConfig.get().getDouble("MinesPitch"));
+                    player.sendMessage(prefix + translate("MinesName"));
+                    player.teleport(mines);
+                }else if(args[0].equalsIgnoreCase("moseisley")){
+                    Location moseisley = new Location(Bukkit.getWorld("MosEisleyName"), WarpConfig.get().getDouble("MosEisleyX"), WarpConfig.get().getDouble("MosEisleyY"), WarpConfig.get().getDouble("MosEisleyZ"), (float) WarpConfig.get().getDouble("MosEisleYaw"), (float) WarpConfig.get().getDouble("MosEisleyPitch"));
+                    player.sendMessage(prefix + translate("MosEisleyName"));
+                    player.teleport(moseisley);
                 }else{
                     player.openInventory(warps);
                 }

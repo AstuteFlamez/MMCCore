@@ -5,19 +5,19 @@ DathomirDesc:
   - '&6&o→ Coming soon...'
 DathomirX: 19
 DathomirY: 66
-DathomirZ: 56
-DathomirYaw: -129.99f
-DathomirPitch: 4.35f
+DathomirZ: -56
+DathomirYaw: -129.99
+DathomirPitch: 4.35
 # Mustafar
 MustafarSlot: 11
 MustafarName: '&4&lMustafar'
 MustafarDesc:
   - '&6&o→ Coming soon...'
 MustafarX: -3
-MustafarY: 66
+MustafarY: 62
 MustafarZ: -43
-MustafarYaw: 157.65f
-MustafarPitch: 1.099f
+MustafarYaw: 157.65
+MustafarPitch: 1.099
 # Earth
 EarthSlot: 13
 EarthName: '&a&lEarth'
@@ -26,8 +26,8 @@ EarthDesc:
 EarthX: -82
 EarthY: 120
 EarthZ: -88
-EarthYaw: 78.298f
-EarthzPitch: -7.2f
+EarthYaw: 78.298
+EarthzPitch: -7.2
 # Umbara
 UmbaraSlot: 15
 UmbaraName: '&1&lUmbara'
@@ -36,8 +36,8 @@ UmbaraDesc:
 UmbaraX: -21
 UmbaraY: 73
 UmbaraZ: -21
-UmbaraYaw: -118.799988f
-UmbaraPitch: 3.8999f
+UmbaraYaw: -118.799988
+UmbaraPitch: 3.8999
 # Alderaan
 AlderaanSlot: 17
 AlderaanName: '&a&lAlderaan'
@@ -46,8 +46,8 @@ AlderaanDesc:
 AlderaanX: -169
 AlderaanY: 44
 AlderaanZ: 192
-AlderaanYaw: 174.7999f
-AlderaanPitch: 5.0499f
+AlderaanYaw: 174.7999
+AlderaanPitch: 5.0499
 # Concordia
 ConcordiaSlot: 27
 ConcordiaName: '&9&lConcordia'
@@ -56,8 +56,8 @@ ConcordiaDesc:
 ConcordiaX: 16093
 ConcordiaY: 34
 ConcordiaZ: -3176
-ConcordiaYaw: 158.95f
-ConcordiaPitch: 0.77f
+ConcordiaYaw: 158.95
+ConcordiaPitch: 0.77
 # Kashyyyk
 KashyyykSlot: 29
 KashyyykName: '&2&lKashyyyk'
@@ -66,8 +66,8 @@ KashyyykDesc:
 KashyyykX: -104
 KashyyykY: 17
 KashyyykZ: -15
-KashyyykYaw: -27.079f
-KashyyykPitch: 1.4199f
+KashyyykYaw: -27.079
+KashyyykPitch: 1.4199
 # Naboo
 NabooSlot: 31
 NabooName: '&b&lNaboo'
@@ -76,8 +76,8 @@ NabooDesc:
 NabooX: -12868
 NabooY: 142
 NabooZ: 1262
-NabooYaw: -3.27f
-NabooPitch: -1.83f
+NabooYaw: -3.27
+NabooPitch: -1.83
 # Ilum
 IlumSlot: 33
 IlumName: '&b&lIlum'
@@ -86,8 +86,8 @@ IlumDesc:
 IlumX: 11
 IlumY: -60
 IlumZ: -56
-IlumYaw: 1.8f
-IlumPitch: 4.5f
+IlumYaw: 1.8
+IlumPitch: 4.5
 # Geonosis
 GeonosisSlot: 35
 GeonosisName: '&6&lGeonosis'
@@ -96,8 +96,8 @@ GeonosisDesc:
 GeonosisX: 59
 GeonosisY: 66
 GeonosisZ: -152
-GeonosisYaw: 110.8f
-GeonosisPitch: 0.4f
+GeonosisYaw: 110.8
+GeonosisPitch: 0.4
 # Morak
 MorakSlot: 45
 MorakName: '&2&lMorak'
@@ -106,8 +106,8 @@ MorakDesc:
 MorakX: -342
 MorakY: 118
 MorakZ: -292
-MorakYaw: -52.1f
-MorakPitch: -3.4f
+MorakYaw: -52.1
+MorakPitch: -3.4
 # Tatooine
 TatooineSlot: 47
 TatooineName: '&6&lTatooine'
@@ -117,8 +117,8 @@ TatooineDesc:
 TatooineX: 1682
 TatooineY: 52
 TatooineZ: 181
-TatooineYaw: 179.0379f
-TatooinePitch: 4.951f
+TatooineYaw: 179.0379
+TatooinePitch: 4.951
 # Hoth
 HothSlot: 49
 HothName: '&f&lHoth'
@@ -127,18 +127,18 @@ HothDesc:
 HothX: -47
 HothY: 80
 HothZ: -153
-HothYaw: -18.75f
-HothPitch: -1.65f
+HothYaw: -18.75
+HothPitch: -1.65
 # Mandalore
 MandaloreSlot: 51
 MandaloreName: '&8&lMandalore'
 MandaloreDesc:
   - '&8→ Mines'
-MandaloreX: -9
-MandaloreY: -41
-MandaloreZ: 5
-MandaloreYaw: -1.4f
-MandalorePitch: 32.75f
+MandaloreX: 51
+MandaloreY: -58
+MandaloreZ: -36
+MandaloreYaw: 57.1
+MandalorePitch: -1.8
 # #################################
 # #################################
 # #################################
@@ -150,22 +150,40 @@ BlackMarketName: '&8&lBlack Market'
 BlackMarketX: 1682
 BlackMarketY: 52
 BlackMarketZ: 181
-BlackMarketYaw: 179.0379f
-BlackMarketPitch: 4.951f
+BlackMarketYaw: 179.0379
+BlackMarketPitch: 4.951
 # Jabba'sPalace
 JabbaSlot: 37
 JabbaName: '&2&lJabba''s Palace'
-JabbaX: 0
-JabbaY: 0
-JabbaZ: 0
-JabbaYaw: 0f
-JabbaPitch: 0f
+JabbaX: -154
+JabbaY: -50
+JabbaZ: 62
+JabbaYaw: -16.8
+JabbaPitch: -5.7
 # Arena
 ArenaSlot: 38
-ArenaName: '&&9&lDeath Watch Arena'
+ArenaName: '&9&lDeath Watch Arena'
 ArenaX: 16093
 ArenaY: 34
 ArenaZ: -3176
-ArenaYaw: 158.95f
-ArenaPitch: 0.77f
+ArenaYaw: 158.95
+ArenaPitch: 0.77
+# Mos Eisley
+MosEisleySlot: 24
+MosEisleyName: '&6&lMos Eisley'
+MosEisleyX: 16093
+MosEisleyY: 34
+MosEisleyZ: -3176
+MosEisleyYaw: 158.95
+MosEisleyPitch: 0.77
+# Mines
+MinesSlot: 22
+MinesName: '&4&lConcordia Mines'
+MinesX: 16093
+MinesY: 34
+MinesZ: -3176
+MinesYaw: 158.95
+MinesPitch: 0.77
+
+
 

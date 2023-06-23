@@ -52,6 +52,7 @@ public class WarpInventories {
 
         tatooine.setItem(WarpConfig.get().getInt("BlackMarketSlot"), UtilityMethods.createSubWarp(Material.TINTED_GLASS, "BlackMarketName"));
         tatooine.setItem(WarpConfig.get().getInt("JabbaSlot"), UtilityMethods.createSubWarp(Material.GREEN_TERRACOTTA, "JabbaName"));
+        tatooine.setItem(WarpConfig.get().getInt("MosEisleySlot"), UtilityMethods.createSubWarp(Material.CHISELED_SANDSTONE, "MosEisleyName"));
 
         for (int slot = 0; slot < 54; slot++) {
             ItemStack item = tatooine.getItem(slot);if (item == null || item.getType() == Material.AIR) {
@@ -67,6 +68,8 @@ public class WarpInventories {
         Inventory concordia = Bukkit.createInventory(player, 54, ChatColor.translateAlternateColorCodes('&', WarpConfig.get().getString("ConcordiaName")));
 
         concordia.setItem(WarpConfig.get().getInt("ArenaSlot"), UtilityMethods.createSubWarp(Material.BLACKSTONE_WALL, "ArenaName"));
+        concordia.setItem(WarpConfig.get().getInt("MinesSlot"), UtilityMethods.createSubWarp(Material.ANCIENT_DEBRIS, "MinesName"));
+
         for (int slot = 0; slot < 54; slot++) {
             ItemStack item = concordia.getItem(slot);if (item == null || item.getType() == Material.AIR) {
                 concordia.setItem(slot, ISC.createItem(Material.BLACK_STAINED_GLASS_PANE, createString("&a"),  createString("&a")));
