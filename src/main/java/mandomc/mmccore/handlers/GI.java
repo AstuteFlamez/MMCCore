@@ -1,5 +1,6 @@
 package mandomc.mmccore.handlers;
 
+import mandomc.mmccore.config.SaberConfig;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -150,7 +151,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBRed"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -159,7 +160,7 @@ public class GI {
         iM.setCustomModelData(7);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 15.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBRed"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -174,7 +175,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBBlue"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -183,7 +184,7 @@ public class GI {
         iM.setCustomModelData(8);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBBlue"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -198,7 +199,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBGreen"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -207,7 +208,7 @@ public class GI {
         iM.setCustomModelData(9);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBGreen"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -222,7 +223,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBPurple"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -231,7 +232,7 @@ public class GI {
         iM.setCustomModelData(10);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBPurple"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -246,7 +247,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBYellow"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -255,7 +256,7 @@ public class GI {
         iM.setCustomModelData(11);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBYellow"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -270,7 +271,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("SBYellow"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -279,7 +280,7 @@ public class GI {
         iM.setCustomModelData(12);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("SBYellow"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -294,7 +295,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBRed"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -303,7 +304,7 @@ public class GI {
         iM.setCustomModelData(1);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 15.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBRed"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -318,7 +319,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBBlue"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -327,7 +328,7 @@ public class GI {
         iM.setCustomModelData(2);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBBlue"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -342,7 +343,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBGreen"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -351,7 +352,7 @@ public class GI {
         iM.setCustomModelData(3);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBGreen"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -366,7 +367,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBPurple"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -375,7 +376,7 @@ public class GI {
         iM.setCustomModelData(4);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBPurple"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -390,7 +391,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBYellow"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -399,7 +400,7 @@ public class GI {
         iM.setCustomModelData(5);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBYellow"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -414,7 +415,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("DBWhite"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -423,7 +424,7 @@ public class GI {
         iM.setCustomModelData(6);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("DBWhite"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -438,7 +439,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CRed"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -447,7 +448,7 @@ public class GI {
         iM.setCustomModelData(13);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 15.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CRed"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -462,7 +463,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CBlue"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -471,7 +472,7 @@ public class GI {
         iM.setCustomModelData(14);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CBlue"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -486,7 +487,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CGreen"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -495,7 +496,7 @@ public class GI {
         iM.setCustomModelData(15);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CGreen"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -510,7 +511,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CPurple"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -519,7 +520,7 @@ public class GI {
         iM.setCustomModelData(16);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CPurple"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -534,7 +535,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CYellow"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -543,7 +544,7 @@ public class GI {
         iM.setCustomModelData(17);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CYellow"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -558,7 +559,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("CWhite"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -567,7 +568,7 @@ public class GI {
         iM.setCustomModelData(18);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("CWhite"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -582,7 +583,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("Dooku"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -591,7 +592,7 @@ public class GI {
         iM.setCustomModelData(19);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 18.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("Dooku"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -606,7 +607,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("Inquisitor"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -615,7 +616,7 @@ public class GI {
         iM.setCustomModelData(20);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 18.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("Inquisitor"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;
@@ -630,7 +631,7 @@ public class GI {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble("Darksaber"));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
@@ -639,7 +640,7 @@ public class GI {
         iM.setCustomModelData(21);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble("Darksaber"), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         return i;

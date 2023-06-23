@@ -1,5 +1,6 @@
 package mandomc.mmccore.handlers;
 
+import mandomc.mmccore.config.SaberConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -355,7 +356,7 @@ public class ISC {
         return i;
     }
 
-    public static ItemStack createItem(String displayName, int customModelData, String nameSpacedKey, ItemStack kyber, ItemStack core, ItemStack hilt){
+    public static ItemStack createItem(String displayName, int customModelData, String nameSpacedKey, ItemStack kyber, ItemStack core, ItemStack hilt, String damage){
 
         ItemStack i = new ItemStack(Material.SHIELD);
         ItemMeta iM = i.getItemMeta();
@@ -365,17 +366,17 @@ public class ISC {
         iL.add("");
         iL.add(ChatColor.GRAY + "\"An elegant weapon from a more civilized age.\"");
         iL.add("");
-        iL.add(ChatColor.GRAY + "Melee Damage:" + ChatColor.RED + " 17");
+        iL.add(ChatColor.GRAY + "Melee Damage: " + ChatColor.RED + SaberConfig.get().getDouble(damage));
         iL.add("");
         iL.add(ChatColor.GOLD + "Ability: Saber Throw ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " SHIFT + LEFT CLICK");
         iL.add(ChatColor.GRAY + "Saber Throw Damage:" + ChatColor.RED + " 24");
         iL.add(ChatColor.GRAY + "Saber Throw Cooldown:" + ChatColor.RED + " 10 seconds");
-        /*rLL.add(ChatColor.GOLD + "Ability: Block ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " RIGHT CLICK");*/
+        iL.add(ChatColor.GOLD + "Ability: Block ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " RIGHT CLICK");
         iM.setLore(iL);
         iM.setCustomModelData(customModelData);
         iM.setUnbreakable(true);
         iM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
-        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", 12.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        AttributeModifier iD = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage", SaberConfig.get().getDouble(damage), AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         iM.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, iD);
         i.setItemMeta(iM);
         ShapedRecipe recipe = new ShapedRecipe(NamespacedKey.minecraft(nameSpacedKey), i);

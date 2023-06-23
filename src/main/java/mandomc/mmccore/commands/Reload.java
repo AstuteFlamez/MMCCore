@@ -1,6 +1,7 @@
 package mandomc.mmccore.commands;
 
 import mandomc.mmccore.MMCCore;
+import mandomc.mmccore.config.SaberConfig;
 import mandomc.mmccore.config.WarpConfig;
 import mandomc.mmccore.handlers.RecipeInventories;
 import org.bukkit.ChatColor;
@@ -30,12 +31,14 @@ public class Reload implements CommandExecutor {
             if(player.hasPermission("mmc.reload")){
                 plugin.reloadConfig();
                 WarpConfig.reload();
+                SaberConfig.reload();
                 player.sendMessage("you reloaded mmccore");
             }
 
         }else{
             plugin.reloadConfig();
             WarpConfig.reload();
+            SaberConfig.reload();
             System.out.println("MMCCore successfully reloaded");
         }
         return true;

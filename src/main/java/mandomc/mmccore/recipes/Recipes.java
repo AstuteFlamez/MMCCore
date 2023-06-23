@@ -60,26 +60,26 @@ public class Recipes {
         coreRecipe.setIngredient('I', Material.IRON_INGOT);
         Bukkit.getServer().addRecipe(coreRecipe);
 
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lCrossguard Lightsaber"), 13, "redcrossguardlightsaber", GI.redKyber(), core, crossGuardHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lCrossguard Lightsaber"), 14, "bluecrossguardlightsaber", GI.blueKyber(), core, crossGuardHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lCrossguard Lightsaber"), 15, "greencrossguardlightsaber", GI.greenKyber(), core, crossGuardHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lCrossguard Lightsaber"), 16, "purplecrossguardlightsaber", GI.purpleKyber(), core, crossGuardHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lCrossguard Lightsaber"), 17, "yellowcrossguardlightsaber", GI.yellowKyber(), core, crossGuardHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lCrossguard Lightsaber"), 18, "whitecrossguardlightsaber", whiteKyber, core, crossGuardHilt);
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lCrossguard Lightsaber"), 13, "redcrossguardlightsaber", GI.redKyber(), core, crossGuardHilt, "CRed");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lCrossguard Lightsaber"), 14, "bluecrossguardlightsaber", GI.blueKyber(), core, crossGuardHilt, "CBlue");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lCrossguard Lightsaber"), 15, "greencrossguardlightsaber", GI.greenKyber(), core, crossGuardHilt, "CGreen");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lCrossguard Lightsaber"), 16, "purplecrossguardlightsaber", GI.purpleKyber(), core, crossGuardHilt, "CPurple");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lCrossguard Lightsaber"), 17, "yellowcrossguardlightsaber", GI.yellowKyber(), core, crossGuardHilt, "CYellow");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lCrossguard Lightsaber"), 18, "whitecrossguardlightsaber", whiteKyber, core, crossGuardHilt, "CWhite");
 
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lDouble-Bladed Lightsaber"), 1, "reddoublebladedlightsaber", GI.redKyber(), core, doubleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lDouble-Bladed Lightsaber"), 2, "bluedoublebladedlightsaber", GI.blueKyber(), core, doubleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lDouble-Bladed Lightsaber"), 3, "greendoublebladedlightsaber", GI.greenKyber(), core, doubleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lDouble-Bladed Lightsaber"), 4, "purpledoublebladedlightsaber", GI.purpleKyber(), core, doubleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lDouble-Bladed Lightsaber"), 5, "yellowdoublebladedlightsaber", GI.yellowKyber(), core, doubleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lDouble-Bladed Lightsaber"), 6, "whitedoublebladedlightsaber", whiteKyber, core, doubleBladedHilt);
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lDouble-Bladed Lightsaber"), 1, "reddoublebladedlightsaber", GI.redKyber(), core, doubleBladedHilt, "DBRed");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lDouble-Bladed Lightsaber"), 2, "bluedoublebladedlightsaber", GI.blueKyber(), core, doubleBladedHilt, "DBBlue");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lDouble-Bladed Lightsaber"), 3, "greendoublebladedlightsaber", GI.greenKyber(), core, doubleBladedHilt, "DBGreen");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lDouble-Bladed Lightsaber"), 4, "purpledoublebladedlightsaber", GI.purpleKyber(), core, doubleBladedHilt, "DBPurple");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lDouble-Bladed Lightsaber"), 5, "yellowdoublebladedlightsaber", GI.yellowKyber(), core, doubleBladedHilt, "DBYellow");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lDouble-Bladed Lightsaber"), 6, "whitedoublebladedlightsaber", whiteKyber, core, doubleBladedHilt, "DBWhite");
 
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lSingle-Bladed Lightsaber"), 7, "redsinglebladedlightsaber", GI.redKyber(), core, singleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lSingle-Bladed Lightsaber"), 8, "bluesinglebladedlightsaber", GI.blueKyber(), core, singleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lSingle-Bladed Lightsaber"), 9, "greensinglebladedlightsaber", GI.greenKyber(), core, singleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lSingle-Bladed Lightsaber"), 10, "purplesinglebladedlightsaber", GI.purpleKyber(), core, singleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lSingle-Bladed Lightsaber"), 11, "yellowsinglebladedlightsaber", GI.yellowKyber(), core, singleBladedHilt);
-        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lSingle-Bladed Lightsaber"), 12, "whitesinglebladedlightsaber", whiteKyber, core, singleBladedHilt);
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&c&lSingle-Bladed Lightsaber"), 7, "redsinglebladedlightsaber", GI.redKyber(), core, singleBladedHilt, "SBRed");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&9&lSingle-Bladed Lightsaber"), 8, "bluesinglebladedlightsaber", GI.blueKyber(), core, singleBladedHilt, "SBBlue");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&a&lSingle-Bladed Lightsaber"), 9, "greensinglebladedlightsaber", GI.greenKyber(), core, singleBladedHilt, "SBGreen");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&5&lSingle-Bladed Lightsaber"), 10, "purplesinglebladedlightsaber", GI.purpleKyber(), core, singleBladedHilt, "SBPurple");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&e&lSingle-Bladed Lightsaber"), 11, "yellowsinglebladedlightsaber", GI.yellowKyber(), core, singleBladedHilt, "SBYellow");
+        ISC.createItem(ChatColor.translateAlternateColorCodes('&', "&f&lSingle-Bladed Lightsaber"), 12, "whitesinglebladedlightsaber", whiteKyber, core, singleBladedHilt, "SBWhite");
 
 
     }

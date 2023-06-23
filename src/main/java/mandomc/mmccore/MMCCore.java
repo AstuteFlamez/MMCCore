@@ -1,6 +1,7 @@
 package mandomc.mmccore;
 
 import mandomc.mmccore.commands.*;
+import mandomc.mmccore.config.SaberConfig;
 import mandomc.mmccore.config.WarpConfig;
 import mandomc.mmccore.listeners.*;
 import mandomc.mmccore.recipes.Recipes;
@@ -34,6 +35,9 @@ public final class MMCCore extends JavaPlugin {
         WarpConfig.setup();
         WarpConfig.get().options().copyDefaults(true);
         WarpConfig.save();
+        SaberConfig.setup();
+        SaberConfig.get().options().copyDefaults(true);
+        SaberConfig.save();
 
         Recipes.init();
 
