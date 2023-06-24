@@ -52,7 +52,7 @@ public class StartKoth implements CommandExecutor {
                             double x = player.getLocation().getX();
                             double z = player.getLocation().getZ();
 
-                            if(world.equals("Hoth2") && ((x <= -128 && x >= -143) && (z <= 143 && z >= 128)) && player.getGameMode() == GameMode.SURVIVAL && !player.isInsideVehicle()){
+                            if(world.equals("Hoth") && ((x <= -150 && x >= -158) && (z <= 138 && z >= 124)) && player.getGameMode() == GameMode.SURVIVAL && !player.isInsideVehicle()){
                                 if(!koth.getPlayersInKothTime().containsKey(player)){
                                     koth.getPlayersInKothTime().put(player,0);
                                 }else{
