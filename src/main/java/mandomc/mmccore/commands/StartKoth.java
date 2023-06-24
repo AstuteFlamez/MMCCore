@@ -37,7 +37,7 @@ public class StartKoth implements CommandExecutor {
 
                 koth = new Koth(uuid);
 
-                Bukkit.broadcastMessage(prefix + ChatColor.GRAY + "A koth has started on Hoth at -138, 30, 135!");
+                Bukkit.broadcastMessage(prefix + ChatColor.GRAY + "A koth has started on Hoth at -156, 30, 128!");
 
                 new BukkitRunnable(){
                     @Override
@@ -58,7 +58,6 @@ public class StartKoth implements CommandExecutor {
                                 }else{
                                     int playerTime = koth.getPlayersInKothTime().get(player) + 1;
                                     koth.getPlayersInKothTime().replace(player, playerTime);
-                                    Bukkit.broadcastMessage(player.getName() + " " + time);
 
                                     if(playerTime == 20){
                                         Bukkit.broadcastMessage(prefix + ChatColor.GRAY + player.getName() + " is " + ChatColor.GREEN + "20%" + ChatColor.GRAY + " done capturing koth!");
