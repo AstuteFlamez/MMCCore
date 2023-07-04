@@ -27,20 +27,19 @@ public class Reload implements CommandExecutor {
 
         if(commandSender instanceof Player){
             Player player = (Player) commandSender;
-
             if(player.hasPermission("mmc.reload")){
                 plugin.reloadConfig();
                 WarpConfig.reload();
                 SaberConfig.reload();
                 player.sendMessage("you reloaded mmccore");
             }
-
         }else{
             plugin.reloadConfig();
             WarpConfig.reload();
             SaberConfig.reload();
             System.out.println("MMCCore successfully reloaded");
         }
+
         return true;
     }
 }
