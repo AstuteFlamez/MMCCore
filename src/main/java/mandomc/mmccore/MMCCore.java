@@ -45,16 +45,11 @@ public final class MMCCore extends JavaPlugin {
 
         BukkitTask vehicleTask = new ShipsRunnable(this).runTaskTimer(this, 0L, 1L);
 
-        getCommand("recipes").setExecutor(new mandomc.mmccore.commands.Recipes());
-        getCommand("mmcget").setExecutor(new MMCGet());
-        getCommand("mmcgive").setExecutor(new MMCGive());
-        getCommand("yaw").setExecutor(new Yaw());
-        getCommand("pitch").setExecutor(new Pitch());
-        getCommand("startkoth").setExecutor(new StartKoth(this));
-        getCommand("warp").setExecutor(new Warp());
-        getCommand("spawn").setExecutor(new Spawn());
-        getCommand("mmcreload").setExecutor(new Reload(this));
+        getCommand("mc").setExecutor(new MC(this));
+        getCommand("vehicle").setExecutor(new Vehicle());
 
+        getServer().getPluginManager().registerEvents(new Vehicle(), this);
+        getServer().getPluginManager().registerEvents(new MC(this), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new ExploitFixes(this), this);
         getServer().getPluginManager().registerEvents(new MythicMobDeath(), this);

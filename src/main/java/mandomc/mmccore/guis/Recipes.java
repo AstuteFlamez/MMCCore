@@ -55,28 +55,29 @@ public class Recipes implements Listener {
 
 
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "MandoMC Recipes"))) {
-            switch (event.getCurrentItem().getType()) {
-                case SHIELD:
+            switch (event.getSlot()) {
+                case 0:
                     player.openInventory(weapons);
                     break;
-                case BARRIER:
+                case 1:
+                    player.openInventory(parts);
+                    break;
+                case 8:
                     player.closeInventory();
                     break;
-                case WOODEN_SWORD:
-                    player.openInventory(parts);
             }
             event.setCancelled(true);
         }
 
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Weapon Recipes"))) {
-            switch (event.getCurrentItem().getType()) {
-                case SHIELD:
+            switch (event.getSlot()) {
+                case 0:
                     player.openInventory(lightsabers);
                     break;
-                case ARROW:
+                case 7:
                     player.openInventory(recipes);
                     break;
-                case BARRIER:
+                case 8:
                     player.closeInventory();
                     break;
             }
@@ -84,189 +85,159 @@ public class Recipes implements Listener {
         }
 
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Lightsaber Recipes"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 0:
+                    crossGuardAnimation(player);
+                    break;
+                case 1:
+                    doubleBladedAnimation(player);
+                    break;
+                case 2:
+                    singleBladedAnimation(player);
+                    break;
+                case 7:
                     player.openInventory(weapons);
                     break;
-                case BARRIER:
+                case 8:
                     player.closeInventory();
                     break;
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&4&lCrossguard Lightsaber Recipes"))){
-                crossGuardAnimation(player);
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&4&lDouble-Bladed Lightsaber Recipes"))){
-                doubleBladedAnimation(player);
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&9&lSingle-Bladed Lightsaber Recipes"))){
-                singleBladedAnimation(player);
             }
             event.setCancelled(true);
         }
 
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Part Recipes"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
-                    player.openInventory(recipes);
+            switch (event.getSlot()) {
+                case 0:
+                    player.openInventory(crossGuardHilt);
                     break;
-                case BARRIER:
-                    player.closeInventory();
+                case 1:
+                    player.openInventory(dbHilt);
                     break;
-                case BEACON:
+                case 2:
+                    player.openInventory(sHilt);
+                    break;
+                case 3:
                     player.openInventory(core);
                     break;
-                /*case NETHER_STAR:
-                    kyberAnimation(player);
-                    break;*/
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&7Crossguard Hilt"))){
-                player.openInventory(crossGuardHilt);
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&7Double-Bladed Hilt"))){
-                player.openInventory(dbHilt);
-            }
-            if(event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&7Single-Bladed Hilt"))){
-                player.openInventory(sHilt);
+                case 7:
+                    player.openInventory(recipes);
+                    break;
+                case 8:
+                    player.closeInventory();
+                    break;
             }
             event.setCancelled(true);
         }
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Crossguard Hilt Recipe"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 23:
+                    player.openWorkbench(null, true);
+                    break;
+                case 52:
                     player.openInventory(parts);
                     break;
-                case BARRIER:
+                case 53:
                     player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
-                    player.openWorkbench(null, true);
                     break;
             }
             event.setCancelled(true);
         }
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Double-Bladed Hilt Recipe"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 23:
+                    player.openWorkbench(null, true);
+                    break;
+                case 52:
                     player.openInventory(parts);
                     break;
-                case BARRIER:
+                case 53:
                     player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
-                    player.openWorkbench(null, true);
                     break;
             }
             event.setCancelled(true);
         }
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Single-Bladed Hilt Recipe"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 23:
+                    player.openWorkbench(null, true);
+                    break;
+                case 52:
                     player.openInventory(parts);
                     break;
-                case BARRIER:
+                case 53:
                     player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
-                    player.openWorkbench(null, true);
                     break;
             }
             event.setCancelled(true);
         }
         if ((event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Lightsaber Core Recipe"))) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 23:
+                    player.openWorkbench(null, true);
+                    break;
+                case 52:
                     player.openInventory(parts);
                     break;
-                case BARRIER:
+                case 53:
                     player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
-                    player.openWorkbench(null, true);
                     break;
             }
             event.setCancelled(true);
         }
         if (event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Kyber Crystal Recipes")) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
+            switch (event.getSlot()) {
+                case 23:
+                    player.openWorkbench(null, true);
+                    break;
+                case 52:
                     player.openInventory(parts);
                     break;
-                case BARRIER:
+                case 53:
                     player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
-                    player.openWorkbench(null, true);
                     break;
             }
             event.setCancelled(true);
         }
 
         if (event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Crossguard Saber Recipes")) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
-                    player.openInventory(lightsabers);
-                    break;
-                case BARRIER:
-                    player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
+            switch (event.getSlot()) {
+                case 23:
                     player.openWorkbench(null, true);
                     break;
-                case WOODEN_SWORD:
-                    player.openInventory(crossGuardHilt);
+                case 52:
+                    player.openInventory(lightsabers);
                     break;
-                case BEACON:
-                    player.openInventory(core);
+                case 53:
+                    player.closeInventory();
                     break;
-                /*case NETHER_STAR:
-                    kyberAnimation(player);
-                    break;*/
             }
             event.setCancelled(true);
         }
         if (event.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Double-Bladed Saber Recipes")) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
-                    player.openInventory(lightsabers);
-                    break;
-                case BARRIER:
-                    player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
+            switch (event.getSlot()) {
+                case 23:
                     player.openWorkbench(null, true);
                     break;
-                case WOODEN_SWORD:
-                    player.openInventory(dbHilt);
+                case 52:
+                    player.openInventory(lightsabers);
                     break;
-                case BEACON:
-                    player.openInventory(core);
+                case 53:
+                    player.closeInventory();
                     break;
-                /*case NETHER_STAR:
-                    kyberAnimation(player);
-                    break;*/
             }
             event.setCancelled(true);
         }
         if (event.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Single-Bladed Saber Recipes")) {
-            switch (event.getCurrentItem().getType()) {
-                case ARROW:
-                    player.openInventory(lightsabers);
-                    break;
-                case BARRIER:
-                    player.closeInventory();
-                    break;
-                case CRAFTING_TABLE:
+            switch (event.getSlot()) {
+                case 23:
                     player.openWorkbench(null, true);
                     break;
-                case WOODEN_SWORD:
-                    player.openInventory(sHilt);
+                case 52:
+                    player.openInventory(lightsabers);
                     break;
-                case BEACON:
-                    player.openInventory(core);
+                case 53:
+                    player.closeInventory();
                     break;
-                /*case NETHER_STAR:
-                    kyberAnimation(player);
-                    break;*/
             }
             event.setCancelled(true);
         }

@@ -5,10 +5,8 @@ import mandomc.mmccore.vehicles.TieFighter;
 import mandomc.mmccore.vehicles.Vehicle;
 import mandomc.mmccore.vehicles.XWing;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Phantom;
-import org.bukkit.entity.Player;
+import org.bukkit.Location;
+import org.bukkit.entity.*;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;
@@ -62,7 +60,10 @@ public class ShipsRunnable extends BukkitRunnable {
                         seat1.setRotation(player.getLocation().getYaw(), player.getLocation().getPitch());
                         seat1.setVelocity(seat1.getLocation().getDirection().multiply(1.5));
 
-                        model.teleport(seat1.getLocation());
+                        Location seat1Location = seat1.getLocation(); // Get seat1's location
+                        Location targetLocation = seat1Location.clone(); // Clone the location to avoid modifying seat1's location
+                        targetLocation.setY(targetLocation.getY() - 1); // Adjust the Y-coordinate to be one block lower
+                        model.teleport(targetLocation); // Teleport the model to the adjusted location
                     }
                     if(xWing.getPilot() == null){
                         Entity seat1 = xWing.getSeat1();

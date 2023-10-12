@@ -22,6 +22,7 @@ public class ISC {
         meta.setDisplayName(displayName);
         ArrayList<String> lore = new ArrayList<String>();
         lore.add(newLore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         meta.setLore(lore);
 
         return i;
@@ -38,6 +39,7 @@ public class ISC {
 
         ItemMeta meta = i.getItemMeta();
         meta.setDisplayName(displayName);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -49,6 +51,7 @@ public class ISC {
         ItemMeta meta = i.getItemMeta();
         meta.setDisplayName(displayName);
         meta.setCustomModelData(customModelData);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -63,6 +66,7 @@ public class ISC {
         lore.add(l1);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -78,6 +82,7 @@ public class ISC {
         lore.add(l2);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -94,6 +99,7 @@ public class ISC {
         lore.add(l3);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -111,6 +117,7 @@ public class ISC {
         lore.add(l4);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -129,6 +136,7 @@ public class ISC {
         lore.add(l5);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -148,6 +156,7 @@ public class ISC {
         lore.add(l6);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -168,6 +177,7 @@ public class ISC {
         lore.add(l7);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -189,6 +199,7 @@ public class ISC {
         lore.add(l8);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -211,6 +222,7 @@ public class ISC {
         lore.add(l9);
         meta.setCustomModelData(customModelData);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -225,6 +237,7 @@ public class ISC {
         lore.add(l1);
         lore.add(l2);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -240,6 +253,7 @@ public class ISC {
         lore.add(l2);
         lore.add(l3);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -256,6 +270,7 @@ public class ISC {
         lore.add(l3);
         lore.add(l4);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -273,6 +288,7 @@ public class ISC {
         lore.add(l4);
         lore.add(l5);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -291,6 +307,7 @@ public class ISC {
         lore.add(l5);
         lore.add(l6);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -310,6 +327,7 @@ public class ISC {
         lore.add(l6);
         lore.add(l7);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -330,6 +348,7 @@ public class ISC {
         lore.add(l7);
         lore.add(l8);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;
@@ -351,6 +370,7 @@ public class ISC {
         lore.add(l8);
         lore.add(l9);
         meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         i.setItemMeta(meta);
 
         return i;

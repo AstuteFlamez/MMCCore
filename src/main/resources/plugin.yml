@@ -7,15 +7,5 @@ authors: [ AstuteFlamez ]
 description: A core plugin for the minecraft server MandoMC.
 softdepend: [MythicMobs,WorldGuard]
 commands:
-  yaw:
-  pitch:
-  startkoth:
-  recipes:
-    aliases: [ lightsaber, lightsabers ]
-  mmcget:
-    aliases: [ itemget ]
-  mmcgive:
-    aliases: [ itemgive ]
-  warp:
-  spawn:
-  mmcreload:
+  mc:
+  vehicle:

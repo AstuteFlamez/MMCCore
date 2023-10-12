@@ -15,35 +15,62 @@ import java.util.UUID;
 
 public class GI {
 
-    public static ItemStack xWing(){
-        ItemStack item = new ItemStack(Material.WOODEN_SWORD);
+    public static ItemStack back(){
+
+        ItemStack item = new ItemStack(Material.ARROW);
         ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName(ChatColor.RED + "X-Wing Starfighter");
-        ArrayList<String> itemLore = new ArrayList<String>();
-        itemLore.add(ChatColor.GRAY + "Right click to spawn!");
-        itemLore.add(ChatColor.GRAY + "Right click the cockpit to enter!");
-        itemLore.add("");
-        itemLore.add(ChatColor.GOLD + "Ability: Proton Torpedos ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " LEFT CLICK");
-        itemLore.add(ChatColor.GRAY + "Proton Torpedos Cooldown:" + ChatColor.RED + " 60 seconds");
-        itemMeta.setLore(itemLore);
-        itemMeta.setCustomModelData(6);
+        itemMeta.setDisplayName(translate("&4&lBACK"));
         item.setItemMeta(itemMeta);
+
         return item;
     }
 
-    public static ItemStack xWingColored(int customModelData, ChatColor color){
+    public static ItemStack close(){
+
+        ItemStack item = new ItemStack(Material.BARRIER);
+        ItemMeta itemMeta = item.getItemMeta();
+        itemMeta.setDisplayName(translate("&c&lCLOSE"));
+        item.setItemMeta(itemMeta);
+
+        return item;
+    }
+
+    public static ItemStack xWing(ChatColor color){
+
         ItemStack item = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName(color + "X-Wing Starfighter");
-        ArrayList<String> itemLore = new ArrayList<String>();
-        itemLore.add(ChatColor.GRAY + "Right click to spawn!");
-        itemLore.add(ChatColor.GRAY + "Right click the cockpit to enter!");
+        ArrayList<String> itemLore = new ArrayList<>();
+        itemLore.add(ChatColor.GRAY + "Right click to spawn and fly!");
+        itemLore.add(ChatColor.GRAY + "/vehicle to change color!");
         itemLore.add("");
         itemLore.add(ChatColor.GOLD + "Ability: Proton Torpedos ->" + ChatColor.YELLOW + "" + ChatColor.BOLD + " LEFT CLICK");
         itemLore.add(ChatColor.GRAY + "Proton Torpedos Cooldown:" + ChatColor.RED + " 60 seconds");
         itemMeta.setLore(itemLore);
-        itemMeta.setCustomModelData(customModelData);
+        itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         item.setItemMeta(itemMeta);
+
+        switch(color){
+            case RED:
+                ItemMeta red = itemMeta;
+                red.setDisplayName(color + "Red Squadron X-Wing");
+                red.setCustomModelData(6);
+                item.setItemMeta(red);
+                break;
+            case DARK_GREEN:
+                ItemMeta green = itemMeta;
+                green.setDisplayName(color + "Green Squadron X-Wing");
+                green.setCustomModelData(7);
+                item.setItemMeta(green);
+                break;
+            case DARK_AQUA:
+                ItemMeta blue = itemMeta;
+                blue.setDisplayName(color + "Blue Squadron X-Wing");
+                blue.setCustomModelData(9);
+                item.setItemMeta(blue);
+                break;
+        }
+
         return item;
     }
 
@@ -51,7 +78,7 @@ public class GI {
         ItemStack item = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName(ChatColor.GRAY + "N-1 Starfighter");
-        ArrayList<String> itemLore = new ArrayList<String>();
+        ArrayList<String> itemLore = new ArrayList<>();
         itemLore.add(ChatColor.GRAY + "Right click to spawn!");
         itemLore.add(ChatColor.GRAY + "Right click the cockpit to enter!");
         itemLore.add("");
@@ -59,6 +86,7 @@ public class GI {
         itemLore.add(ChatColor.GRAY + "Laser Cannons Cooldown:" + ChatColor.RED + " 2 seconds");
         itemMeta.setLore(itemLore);
         itemMeta.setCustomModelData(7);
+        itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         item.setItemMeta(itemMeta);
         return item;
     }
@@ -67,7 +95,7 @@ public class GI {
         ItemStack item = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName(ChatColor.DARK_GRAY + "Tie-Fighter");
-        ArrayList<String> itemLore = new ArrayList<String>();
+        ArrayList<String> itemLore = new ArrayList<>();
         itemLore.add(ChatColor.GRAY + "Right click to spawn!");
         itemLore.add(ChatColor.GRAY + "Right click the cockpit to enter!");
         itemLore.add("");
@@ -75,6 +103,7 @@ public class GI {
         itemLore.add(ChatColor.GRAY + "Laser Cannons Cooldown:" + ChatColor.RED + " 2 seconds");
         itemMeta.setLore(itemLore);
         itemMeta.setCustomModelData(8);
+        itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         item.setItemMeta(itemMeta);
         return item;
     }
@@ -83,6 +112,7 @@ public class GI {
         ItemStack core = new ItemStack(Material.BEACON);
         ItemMeta coreMeta = core.getItemMeta();
         coreMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&b&lLightsaber Core"));
+        coreMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_UNBREAKABLE);
         core.setItemMeta(coreMeta);
         return core;
     }
@@ -706,5 +736,9 @@ public class GI {
         iM.setCustomModelData(6);
         i.setItemMeta(iM);
         return i;
+    }
+
+    public static String translate(String string) {
+        return ChatColor.translateAlternateColorCodes('&', string);
     }
 }
